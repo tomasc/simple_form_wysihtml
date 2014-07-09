@@ -6,11 +6,11 @@ require 'simple_form_wysihtml/version'
 Gem::Specification.new do |spec|
   spec.name          = "simple_form_wysihtml"
   spec.version       = SimpleFormWysihtml::VERSION
-  spec.authors       = ["Asger Behncke Jacobsen"]
-  spec.email         = ["TODO: Write your email address"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.authors       = ["Tomas Celizna"]
+  spec.email         = ["tomas.celizna@gmail.com"]
+  spec.summary       = %q{Adds wysihtml input fields to simple_form.}
+  spec.description   = %q{Adds wysihtmld input fields to simple_form.}
+  spec.homepage      = "https://github.com/tomasc/simple_form_wysihtml"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
