@@ -1,6 +1,6 @@
-# SimpleFormWysihtml
+# Simple Form Wysihtml5
 
-TODO: Write a gem description
+Integrates [Wysihtml5](http://xing.github.io/wysihtml5) editor with Rails and Simple Form.
 
 ## Installation
 
@@ -18,7 +18,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Global Configuration
+
+    TODO
+    
+Use in forms
+
+    = form.input :body, as: :wysihtml
+    
+Configuration
+
+    TODO
 
 ## Contributing
 
