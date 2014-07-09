@@ -18,17 +18,13 @@ Or install it yourself as:
 
 ## Usage
 
-Global Configuration
-
-    TODO
-    
-Use in forms
+Use in forms:
 
     = form.input :body, as: :wysihtml
     
-Configuration
+## Configuration
 
-    TODO
+TODO: describe global and local configuration options
 
 ## Contributing
 
