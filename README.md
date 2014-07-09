@@ -1,6 +1,6 @@
 # Simple Form Wysihtml5
 
-Integrates [Wysihtml5](http://xing.github.io/wysihtml5) editor with Rails and Simple Form.
+Integrates [Wysihtml5](http://xing.github.io/wysihtml5) editor (resp. [this branch](https://github.com/Edicy/wysihtml5) of it) with Rails and Simple Form.
 
 ## Installation
 
