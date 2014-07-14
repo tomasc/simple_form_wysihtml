@@ -20,6 +20,10 @@ To make it work you need to require the javascripts in `application.js`:
 
     //= require simple_form_wysihtml
 
+Optionally you can add the (very minimal) default styling in `application.css`:
+
+    *= require 'simple_form_wysihtml'
+
 ## Usage
 
 Use in forms:
