@@ -1,5 +1,7 @@
 # Simple Form Wysihtml
 
+[![Gem Version](https://badge.fury.io/rb/simple_form_wysihtml.svg)](http://badge.fury.io/rb/simple_form_wysihtml)
+
 Integrates [Wysihtml5](http://xing.github.io/wysihtml5) editor (resp. [this branch](https://github.com/Edicy/wysihtml5) of it) with Rails and [Simple Form](https://github.com/plataformatec/simple_form).
 
 ## Installation
