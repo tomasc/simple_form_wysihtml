@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = SimpleFormWysihtml::VERSION
   spec.authors       = ["Tomas Celizna"]
   spec.email         = ["tomas.celizna@gmail.com"]
-  spec.summary       = %q{Adds wysihtml input fields to simple_form.}
-  spec.description   = %q{Adds wysihtmld input fields to simple_form.}
+  spec.summary       = %q{Integrates Wysihtml5 editor with Rails and Simple Form.}
+  spec.description   = %q{Integrates Wysihtml5 editor with Rails and Simple Form.}
   spec.homepage      = "https://github.com/tomasc/simple_form_wysihtml"
   spec.license       = "MIT"
 
