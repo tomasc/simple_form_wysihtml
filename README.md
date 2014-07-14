@@ -4,11 +4,11 @@ Integrates [Wysihtml5](http://xing.github.io/wysihtml5) editor (resp. [this bran
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add the gem to your Gemfile:
 
     gem 'simple_form_wysihtml'
 
-And then execute:
+And execute:
 
     $ bundle
 
@@ -16,11 +16,19 @@ Or install it yourself as:
 
     $ gem install simple_form_wysihtml
 
+To make it work you need to require the javascripts in `application.js`:
+
+    //= require simple_form_wysihtml
+
 ## Usage
 
 Use in forms:
 
     = form.input :body, as: :wysihtml
+
+## Styling
+
+See [simple_form_wysihtml.css.scss](simple_form_wysihtml.css.scss) for how to style the editor.
 
 ## Configuration
 
