@@ -28,23 +28,9 @@ module SimpleFormWysihtml
     private # =============================================================
 
     # Array of commands for text area toolbar, arranged into command groups.
-    # TODO: Update
-    # When not specified, takes defaults from modulor.yml
-    #
-    # For example (YML):
-    # -
-    #   bold:
-    #     label: B
-    #   italic:
-    #     label: I
-    # -
-    #   fontSize:
-    #     label: 'big'
-    #     value: 'big'
-    #
     # @return [Array]
     def command_list
-      options[:commands] #|| Settings.wysihtml.default_commands.map(&:to_hash)
+      options[:commands] || SimpleFormWysihtml::WysihtmlInput.configuration.commands
     end
 
     # ---------------------------------------------------------------------

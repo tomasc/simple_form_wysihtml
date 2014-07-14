@@ -24,21 +24,29 @@ Use in forms:
 
 ## Configuration
 
-The parser rules are configured by calling your own javascript variable, containing a hash of rules.
+### The toolbar
 
-Add an initializer to the app:
+You can configure the available buttons in the toolbar in your own initializer file:
 
-’’’Ruby
+```Ruby
 # config/initializers/simple_form_wysihtml.rb
 
 SimpleFormWysihtml::WysihtmlInput.configure do |c|
-  c.parser_rules = 'YourCoolNameSpace.parserRules'
+  c.commands = [
+    { bold: { label: 'Bold' }, italic: { label: 'Italic' } },
+    { createLink:  { label: 'Create Link' } },
+    { insertOrderedList: nil, insertUnorderedList: nil }
+  ]
 end
-’’’
+```
 
-And add a javascript file with your own parser rules:
+### Parser rules
 
-’’’Javascript
+The parser rules are defined as a javascript variable, containing a hash of rules.
+
+Add a javascript file with your own parser rules like this (see [Wysihtml5x](https://github.com/edicy/wysihtml5) for available options):
+
+```Javascript
 // app/assets/javascripts/parser_rules.js
 
 YourCoolNameSpace = (function(){
@@ -61,9 +69,17 @@ YourCoolNameSpace = (function(){
 
   return YourCoolNameSpace;
 })();
-’’’
+```
 
-See [Wysihtml5x](https://github.com/edicy/wysihtml5) for parser options.
+Then add an initializer to the app, that fetches the `parserRules` variable:
+
+```Ruby
+# config/initializers/simple_form_wysihtml.rb
+
+SimpleFormWysihtml::WysihtmlInput.configure do |c|
+  c.parser_rules = 'YourCoolNameSpace.parserRules'
+end
+```
 
 ## Contributing
 
