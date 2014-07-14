@@ -101,6 +101,22 @@ SimpleFormWysihtml::WysihtmlInput.configure do |c|
 end
 ```
 
+## TODO
+
+Add the following commands from wysihtml5:
+
+* addTableCells
+* bgColorStyle
+* removeLink
+* createTable
+* deleteTableCells
+* fontSizeStyle
+* foreColorStyle
+* justifyFull
+* mergeTableCells
+
+Reference: [wysihtml5 wiki](https://github.com/edicy/wysihtml5/wiki/Supported-Commands).
+
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/simple_form_wysihtml/fork )
