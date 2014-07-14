@@ -5,13 +5,14 @@ $ ->
   editors = []
 
   $('div.wysihtml_editor').each (idx, wrapper) ->
-    e = new wysihtml5.Editor($(wrapper).find('textarea').get(0),
-      toolbar: $(wrapper).find('div.toolbar').get(0),
-      parserRules: <%= SimpleFormWysihtml::WysihtmlInput.configuration.parser_rules %>,
-      # useLineBreaks: false,
+    e = new wysihtml5.Editor(
+      $(wrapper).find('textarea').get(0)
+      toolbar: $(wrapper).find('div.toolbar').get(0)
+      parserRules: <%= SimpleFormWysihtml::WysihtmlInput.configuration.parser_rules %>
+      # useLineBreaks: false
       # cleanUp: true
     )
-    showToolbarAfterInit: false
-    editors.push e
+    # showToolbarAfterInit: false
+    editors.push(e)
 
 

@@ -21,10 +21,49 @@ Or install it yourself as:
 Use in forms:
 
     = form.input :body, as: :wysihtml
-    
+
 ## Configuration
 
-TODO: describe global and local configuration options
+The parser rules are configured by calling your own javascript variable, containing a hash of rules.
+
+Add an initializer to the app:
+
+’’’Ruby
+# config/initializers/simple_form_wysihtml.rb
+
+SimpleFormWysihtml::WysihtmlInput.configure do |c|
+  c.parser_rules = 'YourCoolNameSpace.parserRules'
+end
+’’’
+
+And add a javascript file with your own parser rules:
+
+’’’Javascript
+// app/assets/javascripts/parser_rules.js
+
+YourCoolNameSpace = (function(){
+
+  var YourCoolNameSpace = {
+    parserRules: {
+      tags: {
+        i: {
+          rename_tag: 'em'
+        },
+
+        a: {
+          set_attributes: {
+            target: "_self"
+          }
+        }
+      }
+    }
+  }
+
+  return YourCoolNameSpace;
+})();
+’’’
+
+See [Wysihtml5x](https://github.com/edicy/wysihtml5) for parser options.
 
 ## Contributing
 
