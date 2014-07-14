@@ -103,7 +103,7 @@ end
 
 ## TODO
 
-Add the following commands from wysihtml5:
+### Add remaining commands from from wysihtml5:
 
 * addTableCells
 * bgColorStyle
@@ -116,6 +116,10 @@ Add the following commands from wysihtml5:
 * mergeTableCells
 
 Reference: [wysihtml5 wiki](https://github.com/edicy/wysihtml5/wiki/Supported-Commands).
+
+### Testing
+
+How to do it?
 
 ## Contributing
 
