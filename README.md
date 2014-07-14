@@ -26,7 +26,7 @@ Use in forms:
 
 ### The toolbar
 
-You can configure the available buttons in the toolbar in your own initializer file:
+You can override the defaults by specifying the toolbar in an initializer:
 
 ```Ruby
 # config/initializers/simple_form_wysihtml.rb
@@ -39,11 +39,18 @@ SimpleFormWysihtml::WysihtmlInput.configure do |c|
   ]
 end
 ```
+
+Alternatively, you can configure individual input fields:
+
+```Slim
+TODO
+```
+
 ### Parser rules
 
-The parser rules are defined as a javascript variable, containing a hash of rules.
+The parser rules are defined as a javascript variable, containing a hash of rules (see [Wysihtml5x](https://github.com/Edicy/wysihtml5/tree/master/parser_rules).
 
-Add a javascript file with your own parser rules like this (see [Wysihtml5x](https://github.com/edicy/wysihtml5) for available options):
+Add a javascript file with your own parser rules (namespaced for example like this):
 
 ```js
 // app/assets/javascripts/parser_rules.js
@@ -70,7 +77,7 @@ YourCoolNameSpace = (function(){
 })();
 ```
 
-Then add an initializer to the app, that fetches the `parserRules` variable:
+Then in your initializer assign the `parser_rules` to the name of your JS variable:
 
 ```Ruby
 # config/initializers/simple_form_wysihtml.rb
