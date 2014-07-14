@@ -46,6 +46,8 @@ Alternatively, you can configure individual input fields:
 TODO
 ```
 
+See the [list of available commands](https://github.com/Edicy/wysihtml5/tree/master/src/commands).
+
 ### Parser rules
 
 The parser rules are defined as a javascript variable, containing a hash of rules (see [Wysihtml5x](https://github.com/Edicy/wysihtml5/tree/master/parser_rules).
