@@ -39,14 +39,13 @@ SimpleFormWysihtml::WysihtmlInput.configure do |c|
   ]
 end
 ```
-
 ### Parser rules
 
 The parser rules are defined as a javascript variable, containing a hash of rules.
 
 Add a javascript file with your own parser rules like this (see [Wysihtml5x](https://github.com/edicy/wysihtml5) for available options):
 
-```Javascript
+```js
 // app/assets/javascripts/parser_rules.js
 
 YourCoolNameSpace = (function(){
