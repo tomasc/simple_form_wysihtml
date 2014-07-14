@@ -1,0 +1,23 @@
+div.wysihtml_editor {
+  div.toolbar {
+    ul.commands {
+      margin: 0;
+      padding: 0;
+
+      li.command_group {
+        display: inline-block;
+
+        a.command.button {
+          margin-right: .5em;
+        }
+      }
+    }
+    div.dialogs {
+      div.dialog {
+        a.button {
+          margin-right: .5em;
+        }
+      }
+    }
+  }
+}
