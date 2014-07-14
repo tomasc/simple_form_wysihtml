@@ -51,8 +51,7 @@ end
 Alternatively, you can configure individual input fields in the form:
 
 ```Slim
-= simple_form_for @model do |f|
-    = f.input :text, as: :wysihtml, commands: [{ bold: { label: 'B' } }, { italic: { label: 'I' } }]
+= f.input :body, as: :wysihtml, commands: [{ bold: { label: 'B' } }, { italic: { label: 'I' } }]
 ```
 
 See the [list of available commands](https://github.com/Edicy/wysihtml5/tree/master/src/commands).
