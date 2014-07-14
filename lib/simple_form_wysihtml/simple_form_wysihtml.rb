@@ -1,16 +1,4 @@
 module SimpleFormWysihtml
-  class Configuration
-
-    attr_accessor :parser_rules
-
-    def initialize
-      @parser_rules = 'wysihtml5ParserRules'
-    end
-
-  end
-
-  # =====================================================================
-
   class WysihtmlInput < SimpleForm::Inputs::Base
 
     class << self
@@ -32,7 +20,7 @@ module SimpleFormWysihtml
 
     # @return [String]
     def input
-      template.content_tag :div, :class => %w(wysihtml_editor) do
+      template.content_tag :div, class: %w(wysihtml_editor) do
         toolbar + text_area
       end
     end
@@ -68,14 +56,14 @@ module SimpleFormWysihtml
 
     # @return [String]
     def toolbar
-      template.content_tag :div, :class => 'toolbar' do
+      template.content_tag :div, class: 'toolbar' do
         commands + dialogs
       end.html_safe
     end
 
     # @return [String]
     def commands
-      template.content_tag :ul, :class => 'commands' do
+      template.content_tag :ul, class: 'commands' do
         command_list.collect do |group|
           command_group(group)
         end.join.html_safe
@@ -85,7 +73,7 @@ module SimpleFormWysihtml
     # @param [Array] group
     # @return [String]
     def command_group group
-      template.content_tag :li, :class => 'command_group' do
+      template.content_tag :li, class: 'command_group' do
         group.map do |command, options|
           self.send(command, options || {})
         end.join.html_safe
@@ -99,7 +87,7 @@ module SimpleFormWysihtml
 
       return unless command_list_with_dialog.present?
 
-      template.content_tag :div, :class => 'dialogs' do
+      template.content_tag :div, class: 'dialogs' do
         command_list_with_dialog.map do |command, options|
           self.send("#{command}_dialog", options || {})
         end.join.html_safe
@@ -290,7 +278,7 @@ module SimpleFormWysihtml
     def command_tag command, label, value=nil
       options = { 'data-wysihtml5-command' => command }
       options.merge!({ 'data-wysihtml5-command-value' => value }) if value.present?
-      options.merge!({ :class => 'command button' })
+      options.merge!({ class: 'command button' })
 
       template.content_tag :a, options do
         label
@@ -303,7 +291,7 @@ module SimpleFormWysihtml
     # @return [String]
     def dialog_tag command, label, dialog_field
       options = { 'data-wysihtml5-dialog' => command, style: 'display: none' }
-      options.merge!({ :class => 'dialog' })
+      options.merge!({ class: 'dialog' })
 
       template.content_tag :div, options do
         template.content_tag(:label, (label + dialog_field).html_safe).html_safe +
@@ -316,7 +304,7 @@ module SimpleFormWysihtml
     # @param [String] label
     # @return [String]
     def action_tag action, label
-      template.content_tag :a, 'data-wysihtml5-dialog-action' => action, :class => 'button' do
+      template.content_tag :a, 'data-wysihtml5-dialog-action' => action, class: 'button' do
         label
       end.html_safe
     end
