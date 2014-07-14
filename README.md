@@ -103,7 +103,7 @@ end
 
 ## TODO
 
-### Add remaining commands from from wysihtml5:
+### Add remaining commands from wysihtml5:
 
 * addTableCells
 * bgColorStyle
