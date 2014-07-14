@@ -28,17 +28,17 @@ The parser rules are configured by calling your own javascript variable, contain
 
 Add an initializer to the app:
 
-’’’Ruby
+```Ruby
 # config/initializers/simple_form_wysihtml.rb
 
 SimpleFormWysihtml::WysihtmlInput.configure do |c|
   c.parser_rules = 'YourCoolNameSpace.parserRules'
 end
-’’’
+```
 
 And add a javascript file with your own parser rules:
 
-’’’Javascript
+```js
 // app/assets/javascripts/parser_rules.js
 
 YourCoolNameSpace = (function(){
@@ -61,7 +61,7 @@ YourCoolNameSpace = (function(){
 
   return YourCoolNameSpace;
 })();
-’’’
+```
 
 See [Wysihtml5x](https://github.com/edicy/wysihtml5) for parser options.
 
