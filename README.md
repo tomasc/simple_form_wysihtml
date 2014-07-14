@@ -28,7 +28,7 @@ Use in forms:
 
 ## Styling
 
-See [simple_form_wysihtml.css.scss](simple_form_wysihtml.css.scss) for how to style the editor.
+See [simple_form_wysihtml.css.scss](https://github.com/tomasc/simple_form_wysihtml/blob/master/lib/assets/stylesheets/simple_form_wysihtml.css.scss) for how to style the editor.
 
 ## Configuration
 
