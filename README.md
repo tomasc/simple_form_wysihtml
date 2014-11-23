@@ -24,7 +24,7 @@ To make it work you need to require the javascripts in `application.js`:
 
 Optionally you can add the (very minimal) default styling in `application.css`:
 
-    *= require 'simple_form_wysihtml'
+    *= require simple_form_wysihtml
 
 ## Usage
 
