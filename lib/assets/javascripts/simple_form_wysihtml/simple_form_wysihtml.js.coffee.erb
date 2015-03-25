@@ -8,11 +8,8 @@ $ ->
     e = new wysihtml5.Editor(
       $(wrapper).find('textarea').get(0)
       toolbar: $(wrapper).find('div.toolbar').get(0)
-      parserRules: <%= SimpleFormWysihtml::WysihtmlInput.configuration.parser_rules %>
-      # useLineBreaks: false
-      # cleanUp: true
+      <%= SimpleFormWysihtml::WysihtmlInput.configuration.options.map{ |k,v| "#{k}: #{v}" }.join(', ') %>
     )
-    # showToolbarAfterInit: false
     editors.push(e)
 
 
